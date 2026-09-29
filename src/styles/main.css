@@ -1,0 +1,79 @@
+@import 'tailwindcss';
+
+/*
+ * Design tokens.
+ * Do NOT put color or font values here — they come from src/config/theme.js,
+ * which is injected as --theme-* CSS variables at build time (src/render.js).
+ * This block only maps those variables onto Tailwind utility names
+ * (bg-paper, text-ink, text-accent, font-heading, …).
+ */
+@theme inline {
+  --color-paper: var(--theme-paper);
+  --color-cream: var(--theme-cream);
+  --color-ink: var(--theme-ink);
+  --color-muted: var(--theme-muted);
+  --color-line: var(--theme-line);
+  --color-accent: var(--theme-accent);
+  --color-on-accent: var(--theme-on-accent);
+  --color-on-ink: var(--theme-on-ink);
+  --color-tint: var(--theme-tint);
+
+  --font-heading: var(--theme-font-heading);
+  --font-body: var(--theme-font-body);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      transition-duration: 0.01ms !important;
+      animation-duration: 0.01ms !important;
+    }
+  }
+  ::selection {
+    background: var(--color-accent);
+    color: var(--color-on-accent);
+  }
+  body.menu-open {
+    overflow: hidden;
+  }
+}
+
+@layer components {
+  /* Thin underline that draws in on hover for nav links */
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0.25rem;
+    height: 1px;
+    width: 100%;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s ease;
+  }
+  .nav-link:hover::after,
+  .nav-link:focus-visible::after {
+    transform: scaleX(1);
+  }
+
+  .site-header.is-scrolled {
+    border-bottom-color: var(--color-line);
+  }
+
+  .lightbox[open] {
+    display: block;
+  }
+  .lightbox [data-lightbox-img] {
+    transition: opacity 0.25s ease;
+  }
+}

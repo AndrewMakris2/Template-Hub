@@ -1,0 +1,30 @@
+import { esc, buttonClasses } from './utils.js';
+import { icon } from './icons.js';
+
+export function Nav({ brand, nav }) {
+  const links = nav.links
+    .map((l) => `<li><a href="${esc(l.href)}" class="rounded-full px-3.5 py-2 text-sm text-ink/75 transition-colors hover:bg-cream hover:text-ink">${esc(l.label)}</a></li>`)
+    .join('');
+  const mobileLinks = nav.links
+    .map((l) => `<li class="border-b border-line"><a href="${esc(l.href)}" class="block py-4 font-heading text-4xl text-ink" data-menu-link>${esc(l.label)}</a></li>`)
+    .join('');
+
+  return `
+<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-ink focus:px-4 focus:py-2 focus:text-on-ink">${esc(nav.skipLinkLabel)}</a>
+<header class="site-header sticky top-0 z-50 border-b border-line/0 transition-[border-color] duration-300" data-header>
+  <div class="absolute inset-0 -z-10 bg-paper/85 backdrop-blur-md" aria-hidden="true"></div>
+  <nav class="mx-auto flex h-16 max-w-6xl items-center justify-between gap-6 px-5 md:h-20 md:px-8" aria-label="Primary">
+    <a href="#top" class="flex items-center gap-2 font-heading text-[1.7rem] italic leading-none text-ink"><span class="h-2.5 w-2.5 rounded-full bg-accent" aria-hidden="true"></span>${esc(brand.name)}</a>
+    <ul class="hidden items-center lg:flex">${links}</ul>
+    <div class="hidden lg:block"><a href="${esc(nav.cta.href)}" class="${buttonClasses.primary} !px-5 !py-2.5 !text-sm">${esc(nav.cta.label)}</a></div>
+    <button type="button" class="inline-flex h-10 w-10 items-center justify-center text-ink lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="${esc(nav.menuOpenLabel)}" data-menu-toggle data-label-open="${esc(nav.menuOpenLabel)}" data-label-close="${esc(nav.menuCloseLabel)}">
+      <span data-icon-open>${icon('menu', 'h-6 w-6')}</span>
+      <span data-icon-close hidden>${icon('close', 'h-6 w-6')}</span>
+    </button>
+  </nav>
+  <div id="mobile-menu" class="fixed inset-x-0 top-16 bottom-0 overflow-y-auto bg-paper px-6 pb-10 pt-4 md:top-20 lg:hidden" hidden data-menu>
+    <ul>${mobileLinks}</ul>
+    <a href="${esc(nav.cta.href)}" class="mt-8 w-full ${buttonClasses.primary}" data-menu-link>${esc(nav.cta.label)}</a>
+  </div>
+</header>`;
+}
