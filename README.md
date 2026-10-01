@@ -26,9 +26,6 @@ Everything written on the site is in **`src/config/content.js`**:
 - `about`: your name, initial and bio
 - `faq`, `process`, `included`, `contact`: everything else
 
-Search the file for **`TODO: confirm`** to find every placeholder decision
-(prices, turnaround, response time, bio) before sending the site out.
-
 Colours and fonts are in **`src/config/theme.js`**.
 
 ## Enquiry form
@@ -37,7 +34,8 @@ The form is a Netlify Form named **`inquiry`**. Its dropdowns are pre-filled
 when a visitor clicks **Start with this design** or a pricing button. You can
 also link straight to a design with `?design=6#contact`.
 
-To get enquiries by email: Netlify dashboard → **Forms → Form notifications**.
+Enquiries are emailed to amakris03@gmail.com. To change the address: Netlify
+dashboard → **Forms → Submission notifications**.
 
 ## Refresh the design screenshots
 

@@ -3,9 +3,6 @@
  *  CONTENT — everything written on the sales site / design hub
  * ============================================================================
  *  Edit this file to change any wording, prices, FAQs or the design list.
- *  Anything marked `// TODO: confirm` is a placeholder decision (brand name,
- *  prices, turnaround, bio) — check each one before sending the site out.
- *  Search this file for "TODO" to find them all.
  * ============================================================================
  */
 
@@ -115,7 +112,7 @@ export const content = {
   pricing: {
     label: 'Pricing',
     heading: 'Simple, one-time pricing.',
-    intro: 'No monthly fees unless you want them. Prices in USD.', // TODO: confirm currency
+    intro: 'No monthly fees unless you want them. Prices in USD.',
     plans: [
       {
         name: 'Launch',
