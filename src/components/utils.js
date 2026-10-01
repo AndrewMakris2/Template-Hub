@@ -45,7 +45,7 @@ export function phoneFrame(src, { eager = false, cls = '' } = {}) {
 /** Shared button styles. */
 export const buttonClasses = {
   primary:
-    'inline-flex items-center justify-center gap-2 rounded-lg bg-accent px-6 py-3 text-[0.95rem] font-medium text-on-accent transition-colors duration-200 hover:bg-ink focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent',
+    'inline-flex items-center justify-center gap-2 rounded-lg bg-accent px-6 py-3 text-[0.95rem] font-medium text-on-accent transition-colors duration-200 hover:bg-accent/85 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent',
   dark:
     'inline-flex items-center justify-center gap-2 rounded-lg bg-ink px-6 py-3 text-[0.95rem] font-medium text-on-ink transition-colors duration-200 hover:bg-accent hover:text-on-accent focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent',
   ghost:

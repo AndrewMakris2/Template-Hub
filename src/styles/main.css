@@ -69,7 +69,7 @@
   }
 
   .site-header.is-scrolled {
-    border-bottom-color: var(--color-line);
+    border-bottom-color: rgb(255 255 255 / 0.08);
   }
 
   .lightbox[open] {

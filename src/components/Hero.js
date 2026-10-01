@@ -11,7 +11,7 @@ export function Hero({ hero, designs }) {
     .join('');
 
   return `
-<section id="top" class="overflow-hidden bg-navy px-5 pb-24 pt-16 text-on-ink md:px-8 md:pt-24" aria-labelledby="hero-heading">
+<section id="top" class="overflow-hidden px-5 pb-20 pt-16 md:px-8 md:pb-24 md:pt-24" aria-labelledby="hero-heading">
   <div class="mx-auto max-w-4xl text-center">
     <div class="flex justify-center">${sectionLabel(hero.eyebrow, 'dark')}</div>
     <h1 id="hero-heading" class="mx-auto mt-6 max-w-3xl text-[clamp(2.6rem,7vw,4.75rem)] font-semibold leading-[1.04] tracking-[-0.035em] text-on-ink">${esc(hero.heading)} <span class="text-sky">${esc(hero.headingAccent)}</span></h1>

@@ -35,7 +35,7 @@ export function Designs({ designs }) {
     .join('');
 
   return `
-<section id="designs" class="scroll-mt-16 bg-navy px-5 py-24 text-on-ink md:px-8 md:py-32" aria-labelledby="designs-heading">
+<section id="designs" class="scroll-mt-16 px-5 pb-28 pt-24 md:px-8 md:pb-36 md:pt-28" aria-labelledby="designs-heading">
   <div class="mx-auto max-w-6xl">
     <div class="max-w-2xl">
       ${sectionLabel(designs.label, 'dark')}

@@ -23,7 +23,7 @@ export const theme = {
     ink: '#111827', // blue-black
     muted: '#5B6575', // slate grey
     line: '#DFE6F0',
-    accent: '#1E3A8A', // navy — the brand color
+    accent: '#0F1F44', // navy — the brand color (same as navy surfaces)
     tint: '#E7ECF6', // pale navy tint
     navy: '#0F1F44', // deepest navy surfaces (designs section, footer)
     sky: '#8FB0F0', // light blue highlight used on navy (hero headline)

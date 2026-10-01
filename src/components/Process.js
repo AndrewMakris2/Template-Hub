@@ -13,7 +13,7 @@ export function Process({ process }) {
     .join('');
 
   return `
-<section id="process" class="scroll-mt-16 bg-cream px-5 py-24 md:px-8 md:py-32" aria-labelledby="process-heading">
+<section id="process" class="scroll-mt-16 bg-paper px-5 py-24 md:px-8 md:py-32" aria-labelledby="process-heading">
   <div class="mx-auto max-w-6xl">
     <div class="max-w-2xl">
       ${sectionLabel(process.label)}

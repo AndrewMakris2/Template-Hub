@@ -63,15 +63,22 @@ export function renderBody() {
   return [
     Nav(content),
     `<main id="main">`,
+    // Navy top zone: hero, booking apps and designs flow as one surface.
+    `<div class="rounded-b-[2rem] bg-navy text-on-ink md:rounded-b-[3rem]">`,
     Hero(content),
     Platforms(content),
     Designs(content),
+    `</div>`,
+    // White middle.
     Included(content),
     Process(content),
     Pricing(content),
     About(content),
     Faq(content),
+    // Navy bottom zone: contact runs straight into the footer.
+    `<div class="rounded-t-[2rem] bg-navy text-on-ink md:rounded-t-[3rem]">`,
     Contact(content),
+    `</div>`,
     `</main>`,
     Footer(content),
   ].join('\n');

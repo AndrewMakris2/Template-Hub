@@ -5,11 +5,11 @@ export function Footer({ brand, nav, footer }) {
   const year = new Date().getFullYear();
   const links = nav.links.map((l) => `<li><a href="${esc(l.href)}" class="hover:text-on-ink">${esc(l.label)}</a></li>`).join('');
   return `
-<footer class="bg-navy px-5 py-14 text-on-ink/70 md:px-8">
-  <div class="mx-auto max-w-6xl">
+<footer class="relative -mt-px bg-navy px-5 pb-12 text-on-ink/70 md:px-8">
+  <div class="mx-auto max-w-6xl border-t border-white/10 pt-12">
     <div class="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
       <div>
-        <a href="#top" class="flex items-center gap-2.5 text-lg font-semibold tracking-tight text-on-ink"><span class="h-2.5 w-2.5 bg-tint" aria-hidden="true"></span>${esc(brand.name)}</a>
+        <a href="#top" class="flex items-center gap-2.5 text-lg font-semibold tracking-tight text-on-ink"><span class="h-2.5 w-2.5 bg-sky" aria-hidden="true"></span>${esc(brand.name)}</a>
         <p class="mt-3 max-w-sm text-sm">${esc(brand.tagline)} ${esc(footer.note)}</p>
       </div>
       <ul class="flex flex-wrap gap-x-6 gap-y-2 text-sm">${links}</ul>
