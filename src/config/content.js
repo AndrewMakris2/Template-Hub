@@ -132,7 +132,7 @@ export const content = {
         badge: 'Most popular',
         featured: true,
         description: 'Your design, tailored to your brand, on your own domain.',
-        features: ['Everything in Launch', 'Your own domain connected', 'Colours and fonts matched to your brand', 'One extra section (bridal, FAQ, products…)', 'Three rounds of revisions', 'Priority launch'],
+        features: ['Everything in Launch', 'Your own domain connected', 'Colours and fonts matched to your brand', 'One extra section (bridal, FAQ, products…)', 'Three rounds of revisions'],
         cta: 'Choose Signature',
       },
       {
@@ -165,7 +165,7 @@ export const content = {
       { q: 'Do I have to switch booking apps?', a: 'No. Your site links straight to the booking app you already use, whether that’s StyleSeat, Vagaro, Booksy, GlossGenius, Square or another. Clients book exactly how they do now.' },
       { q: 'Do I need professional photos?', a: 'No. Good phone photos of your work look great in every design. I’ll crop and optimise them so the site stays fast.' },
       { q: 'What do I need to send you?', a: 'Your photos, a list of services with prices and durations, a few lines about you, your booking link, your contact details and your hours. I’ll send you a simple checklist.' },
-      { q: 'How long does it take?', a: 'About 3 days from when I have your photos and details. The Signature plan gets priority.' },
+      { q: 'How long does it take?', a: 'About 3 days from when I have your photos and details.' },
       { q: 'Can I change things later?', a: 'Yes. With the Care plan, small updates like new prices, photos or hours are included each month. Without it, I can make changes whenever you need them.' },
       { q: 'Do I own my website and domain?', a: 'Yes. Your domain is registered in your name, and your content is always yours.' },
       { q: 'Can you change the colours or fonts?', a: 'Yes. Every design can be matched to your brand colours and fonts. That’s included in the Signature plan.' },
