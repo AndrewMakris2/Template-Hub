@@ -6,7 +6,7 @@ export const designOption = (d) => `No. ${String(d.id).padStart(2, '0')} — ${d
 
 /** The hub: every design with desktop + phone screenshots, style filters and links. */
 export function Designs({ designs }) {
-  const chip = 'rounded-lg border border-white/20 px-4 py-2 text-sm text-on-ink/80 transition-colors hover:border-white/50 hover:text-on-ink aria-pressed:border-accent aria-pressed:bg-accent aria-pressed:text-on-accent';
+  const chip = 'rounded-lg border border-white/20 px-4 py-2 text-sm text-on-ink/80 transition-colors hover:border-white/50 hover:text-on-ink aria-pressed:border-paper aria-pressed:bg-paper aria-pressed:text-navy';
   const filters = [`<button type="button" class="${chip}" aria-pressed="true" data-filter="all">${esc(designs.filterAll)}</button>`]
     .concat(designs.filters.map((f) => `<button type="button" class="${chip}" aria-pressed="false" data-filter="${esc(f.toLowerCase())}">${esc(f)}</button>`))
     .join('');

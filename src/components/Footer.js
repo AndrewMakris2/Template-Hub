@@ -9,7 +9,7 @@ export function Footer({ brand, nav, footer }) {
   <div class="mx-auto max-w-6xl">
     <div class="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
       <div>
-        <a href="#top" class="flex items-center gap-2.5 text-lg font-semibold tracking-tight text-on-ink"><span class="h-2.5 w-2.5 bg-accent" aria-hidden="true"></span>${esc(brand.name)}</a>
+        <a href="#top" class="flex items-center gap-2.5 text-lg font-semibold tracking-tight text-on-ink"><span class="h-2.5 w-2.5 bg-tint" aria-hidden="true"></span>${esc(brand.name)}</a>
         <p class="mt-3 max-w-sm text-sm">${esc(brand.tagline)} ${esc(footer.note)}</p>
       </div>
       <ul class="flex flex-wrap gap-x-6 gap-y-2 text-sm">${links}</ul>

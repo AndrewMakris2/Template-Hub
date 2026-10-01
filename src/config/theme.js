@@ -15,16 +15,16 @@
  */
 
 export const theme = {
-  // Minimal: white, cool greys and a single blue. All text/background pairs meet WCAG AA.
+  // Minimal: white, cool greys and navy. All text/background pairs meet WCAG AA.
   colors: {
     paper: '#FFFFFF',
-    cream: '#F1F5FB', // blue-grey
+    cream: '#F2F4F8', // cool grey
     ink: '#111827', // blue-black
     muted: '#5B6575', // slate grey
     line: '#DFE6F0',
-    accent: '#2456D3', // blue — TODO: confirm your brand color
-    tint: '#E8EFFD', // pale blue
-    navy: '#0D1B3E', // deep blue surfaces (designs section, footer)
+    accent: '#1E3A8A', // navy — the brand color
+    tint: '#E7ECF6', // pale navy tint
+    navy: '#0F1F44', // deepest navy surfaces (designs section, footer)
     onAccent: '#FFFFFF',
     onInk: '#F8FAFC',
   },

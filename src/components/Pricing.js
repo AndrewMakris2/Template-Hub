@@ -10,7 +10,7 @@ export function Pricing({ pricing }) {
         .join('');
       return `
       <li class="relative flex flex-col rounded-xl p-8 ${blue ? 'bg-accent text-on-accent shadow-2xl shadow-accent/30' : 'border border-line bg-paper text-ink'}">
-        ${p.badge ? `<span class="absolute -top-3 left-8 rounded-md bg-navy px-2.5 py-1 text-xs font-medium text-on-ink">${esc(p.badge)}</span>` : ''}
+        ${p.badge ? `<span class="absolute -top-3 left-8 rounded-md bg-tint px-2.5 py-1 text-xs font-medium text-accent ring-1 ring-accent/20">${esc(p.badge)}</span>` : ''}
         <h3 class="text-lg font-semibold tracking-tight">${esc(p.name)}</h3>
         <p class="mt-1 text-sm ${blue ? 'text-on-accent/85' : 'text-muted'}">${esc(p.description)}</p>
         <p class="mt-7 flex items-baseline gap-2"><span class="text-5xl font-semibold tracking-[-0.03em]">${esc(p.price)}</span><span class="text-sm ${blue ? 'text-on-accent/85' : 'text-muted'}">${esc(p.cadence)}</span></p>
