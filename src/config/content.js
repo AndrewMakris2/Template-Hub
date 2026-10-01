@@ -147,7 +147,8 @@ export const content = {
   about: {
     label: 'About me',
     heading: 'Hi, I’m Andrew.',
-    initial: 'AM', // shown in the round avatar
+    photo: { src: '/images/andrew.webp', alt: 'Andrew Makris' },
+    initial: 'AM', // shown in a round avatar if there's no photo
     bio: [
       'I’m Andrew, and I build websites for independent hairstylists. You’ve put years into your craft, and your website should show it off as well as your Instagram does, with your best work up front and booking one tap away.',
       'You work with me directly, start to finish. No agency, no account managers and no tech jargon: you pick a design, send me your photos and services, and I handle the rest. If something needs changing later, you message me and it’s done.',
