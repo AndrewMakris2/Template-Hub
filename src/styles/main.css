@@ -18,6 +18,7 @@
   --color-on-ink: var(--theme-on-ink);
   --color-tint: var(--theme-tint);
   --color-navy: var(--theme-navy);
+  --color-sky: var(--theme-sky);
 
   --font-heading: var(--theme-font-heading);
   --font-body: var(--theme-font-body);

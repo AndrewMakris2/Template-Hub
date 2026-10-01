@@ -9,7 +9,8 @@
  *    line           → hairlines
  *    accent         → brand color (buttons, highlights)
  *    tint           → soft accent background (labels, icon circles)
- *    navy           → deep blue surfaces (designs section, footer)
+ *    navy           → deep blue surfaces (hero, designs section, footer)
+ *    sky            → light blue highlight on navy
  *    onAccent/onInk → text on accent / ink backgrounds
  * ============================================================================
  */
@@ -25,6 +26,7 @@ export const theme = {
     accent: '#1E3A8A', // navy — the brand color
     tint: '#E7ECF6', // pale navy tint
     navy: '#0F1F44', // deepest navy surfaces (designs section, footer)
+    sky: '#8FB0F0', // light blue highlight used on navy (hero headline)
     onAccent: '#FFFFFF',
     onInk: '#F8FAFC',
   },
