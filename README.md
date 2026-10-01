@@ -1,4 +1,4 @@
-# Chairside — sales site & design hub
+# Andrew Makris — sales site & design hub
 
 The website you send to hairstylists: who you are, what you offer, pricing, an
 FAQ, an enquiry form, and a **hub of all 10 website designs** with live links,
@@ -19,7 +19,7 @@ npm run build    # production build → dist/
 
 Everything written on the site is in **`src/config/content.js`**:
 
-- `brand`: the business name (currently the placeholder **Chairside**)
+- `brand`: the business name shown in the nav, footer and page title
 - `hero`: headline, intro and which designs appear in the hero collage
 - `designs.items`: the 10 designs (name, style, tags, "best for", live URL, screenshots)
 - `pricing.plans`: packages and prices
@@ -27,7 +27,7 @@ Everything written on the site is in **`src/config/content.js`**:
 - `faq`, `process`, `included`, `contact`: everything else
 
 Search the file for **`TODO: confirm`** to find every placeholder decision
-(brand name, prices, turnaround, response time, bio) before sending the site out.
+(prices, turnaround, response time, bio) before sending the site out.
 
 Colours and fonts are in **`src/config/theme.js`**.
 
@@ -60,7 +60,7 @@ is shared in texts and DMs.
 
 ## Deploy
 
-The site is the Netlify project **chairside-sites**
-(https://chairside-sites.netlify.app). Link this GitHub repo in Netlify
+The site is the Netlify project **andrew-makris**
+(https://andrew-makris.netlify.app). Link this GitHub repo in Netlify
 (**Project configuration → Build & deploy → Link repository**) to deploy on
 every push. Build settings come from `netlify.toml`.

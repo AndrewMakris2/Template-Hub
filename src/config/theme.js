@@ -14,23 +14,22 @@
  */
 
 export const theme = {
-  // All text/background pairs meet WCAG AA.
+  // Minimal: white, cool greys and a single blue. All text/background pairs meet WCAG AA.
   colors: {
-    paper: '#FAF8F5',
-    cream: '#F1ECE4',
-    ink: '#16141A',
-    muted: '#5F5A63',
-    line: '#E3DDD3',
-    accent: '#5B2A86', // plum — TODO: your brand color
-    tint: '#EEE6F6',
+    paper: '#FFFFFF',
+    cream: '#F4F6F9', // cool light grey
+    ink: '#111827', // blue-black
+    muted: '#5B6575', // slate grey
+    line: '#E2E6EC',
+    accent: '#2456D3', // blue — TODO: confirm your brand color
+    tint: '#EBF1FD', // pale blue
     onAccent: '#FFFFFF',
-    onInk: '#FAF8F5',
+    onInk: '#F8FAFC',
   },
 
   fonts: {
-    heading: "'Instrument Serif', Georgia, 'Times New Roman', serif",
+    heading: "'Geist', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif",
     body: "'Geist', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif",
-    googleFontsUrl:
-      'https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap',
+    googleFontsUrl: 'https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&display=swap',
   },
 };

@@ -15,16 +15,16 @@ const shot = (n, size) => `/images/designs/design-${n}-${size}.webp`;
 export const content = {
   site: {
     lang: 'en',
-    url: 'https://chairside-sites.netlify.app', // TODO: confirm — update if you rename the Netlify project or add a domain
-    title: 'Chairside — Websites for independent hairstylists', // TODO: confirm brand name
+    url: 'https://andrew-makris.netlify.app', // update if you rename the Netlify project or add a domain
+    title: 'Andrew Makris — Websites for independent hairstylists',
     description:
       'Beautiful, mobile-first websites for independent hairstylists. Pick one of ten designs, send your photos and booking link, and launch in about a week.',
-    ogImage: 'https://chairside-sites.netlify.app/images/og.jpg',
-    ogImageAlt: 'Chairside — a collage of website designs for hairstylists',
+    ogImage: 'https://andrew-makris.netlify.app/images/og.jpg',
+    ogImageAlt: 'Andrew Makris — website designs for hairstylists',
   },
 
   brand: {
-    name: 'Chairside', // TODO: confirm brand name
+    name: 'Andrew Makris',
     tagline: 'Websites for independent hairstylists.',
   },
 
@@ -149,13 +149,13 @@ export const content = {
 
   about: {
     label: 'About me',
-    heading: 'Hi, I’m Andrew.', // TODO: confirm name
-    initial: 'A', // TODO: confirm — shown in the round avatar
+    heading: 'Hi, I’m Andrew.',
+    initial: 'AM', // shown in the round avatar
     bio: [
       'I design and build websites for independent hairstylists. Your work is gorgeous, and your website should be too, without you having to learn web design or pay agency prices.', // TODO: confirm bio
       'Every design here was made specifically for stylists: real booking buttons, real galleries, real price lists, and fast on phones. You get one person who handles everything, answers quickly and actually cares how it turns out.', // TODO: confirm bio
     ],
-    signature: 'Andrew', // TODO: confirm name
+    signature: 'Andrew Makris',
   },
 
   faq: {
@@ -200,7 +200,7 @@ export const content = {
 
   footer: {
     note: 'Every design on this page is a live website. Click around.',
-    copyrightName: 'Chairside', // TODO: confirm brand name
+    copyrightName: 'Andrew Makris',
     copyrightSuffix: 'All rights reserved.',
     backToTopLabel: 'Back to top',
   },
