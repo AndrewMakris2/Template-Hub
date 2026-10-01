@@ -176,7 +176,7 @@ export const content = {
   contact: {
     label: 'Get started',
     heading: 'Let’s build your website.',
-    intro: 'Tell me a little about you and which design you like. I’ll get back to you within one business day with next steps.', // TODO: confirm response time
+    intro: 'Tell me a little about you and which design you like. I’ll get back to you the same day with next steps.',
     promises: ['No obligation', 'A real reply from me, not a bot', 'Clear pricing up front'],
     form: {
       name: 'inquiry', // Netlify form name — shows up in the Netlify dashboard
@@ -193,7 +193,7 @@ export const content = {
       honeypotLabel: 'Don’t fill this out if you’re human:',
       submitLabel: 'Send my enquiry',
       sendingLabel: 'Sending…',
-      successMessage: 'Thanks! Your enquiry is in. I’ll be in touch within one business day.', // TODO: confirm response time
+      successMessage: 'Thanks! Your enquiry is in. I’ll be in touch the same day.',
       errorMessage: 'Sorry, something went wrong. Please try again in a moment.',
     },
   },
