@@ -17,6 +17,7 @@
   --color-on-accent: var(--theme-on-accent);
   --color-on-ink: var(--theme-on-ink);
   --color-tint: var(--theme-tint);
+  --color-navy: var(--theme-navy);
 
   --font-heading: var(--theme-font-heading);
   --font-body: var(--theme-font-body);

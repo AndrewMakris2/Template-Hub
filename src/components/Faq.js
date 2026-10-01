@@ -9,7 +9,7 @@ export function Faq({ faq }) {
         <details class="group">
           <summary class="flex cursor-pointer list-none items-center justify-between gap-6 py-5 text-left [&::-webkit-details-marker]:hidden">
             <h3 class="text-lg font-medium tracking-tight text-ink">${esc(it.q)}</h3>
-            <span class="shrink-0 text-muted transition-transform duration-300 group-open:rotate-45 group-open:text-accent" aria-hidden="true">${icon('plus', 'h-5 w-5')}</span>
+            <span class="grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-tint text-accent transition-transform duration-300 group-open:rotate-45" aria-hidden="true">${icon('plus', 'h-4 w-4')}</span>
           </summary>
           <p class="max-w-2xl pb-6 text-base leading-relaxed text-muted">${esc(it.a)}</p>
         </details>

@@ -7,11 +7,11 @@ export function Hero({ hero, designs }) {
   const [left, center, right] = hero.collage.map(byId);
   const phone = byId(hero.phone);
   const highlights = hero.highlights
-    .map((h) => `<li class="flex items-center gap-2"><span class="text-accent">${icon('check', 'h-4 w-4')}</span>${esc(h)}</li>`)
+    .map((h) => `<li class="flex items-center gap-2"><span class="grid h-5 w-5 place-items-center rounded-full bg-accent text-on-accent">${icon('check', 'h-3 w-3')}</span>${esc(h)}</li>`)
     .join('');
 
   return `
-<section id="top" class="overflow-hidden bg-paper px-5 pb-24 pt-16 md:px-8 md:pt-24" aria-labelledby="hero-heading">
+<section id="top" class="overflow-hidden bg-gradient-to-b from-tint via-paper to-paper px-5 pb-24 pt-16 md:px-8 md:pt-24" aria-labelledby="hero-heading">
   <div class="mx-auto max-w-4xl text-center">
     <div class="flex justify-center">${sectionLabel(hero.eyebrow)}</div>
     <h1 id="hero-heading" class="mx-auto mt-6 max-w-3xl text-[clamp(2.6rem,7vw,4.75rem)] font-semibold leading-[1.04] tracking-[-0.035em] text-ink">${esc(hero.heading)} <span class="text-accent">${esc(hero.headingAccent)}</span></h1>

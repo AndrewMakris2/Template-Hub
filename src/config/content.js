@@ -152,8 +152,9 @@ export const content = {
     heading: 'Hi, I’m Andrew.',
     initial: 'AM', // shown in the round avatar
     bio: [
-      'I design and build websites for independent hairstylists. Your work is gorgeous, and your website should be too, without you having to learn web design or pay agency prices.', // TODO: confirm bio
-      'Every design here was made specifically for stylists: real booking buttons, real galleries, real price lists, and fast on phones. You get one person who handles everything, answers quickly and actually cares how it turns out.', // TODO: confirm bio
+      'I’m Andrew, and I build websites for independent hairstylists. You’ve put years into your craft, and your website should show it off as well as your Instagram does, with your best work up front and booking one tap away.',
+      'You work with me directly, start to finish. No agency, no account managers and no tech jargon: you pick a design, send me your photos and services, and I handle the rest. If something needs changing later, you message me and it’s done.',
+      'I care about the details your clients notice: a site that loads fast on their phone, looks polished and makes it effortless to book you.',
     ],
     signature: 'Andrew Makris',
   },

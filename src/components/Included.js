@@ -6,7 +6,7 @@ export function Included({ included }) {
     .map(
       (it) => `
       <li class="bg-paper p-7">
-        <span class="text-accent">${icon(it.icon, 'h-6 w-6')}</span>
+        <span class="grid h-11 w-11 place-items-center rounded-lg bg-tint text-accent">${icon(it.icon, 'h-5 w-5')}</span>
         <h3 class="mt-5 text-lg font-semibold tracking-tight text-ink">${esc(it.title)}</h3>
         <p class="mt-2 text-sm leading-relaxed text-muted">${esc(it.text)}</p>
       </li>`,

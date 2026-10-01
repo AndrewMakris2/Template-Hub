@@ -4,9 +4,9 @@ export function Process({ process }) {
   const steps = process.steps
     .map(
       (s, i) => `
-      <li class="border-t border-line pt-6">
-        <span class="text-sm font-medium tabular-nums text-accent" aria-hidden="true">0${i + 1}</span>
-        <h3 class="mt-3 text-xl font-semibold tracking-tight text-ink">${esc(s.title)}</h3>
+      <li class="border-t-2 border-accent pt-6">
+        <span class="grid h-9 w-9 place-items-center rounded-lg bg-accent text-sm font-semibold tabular-nums text-on-accent" aria-hidden="true">${i + 1}</span>
+        <h3 class="mt-4 text-xl font-semibold tracking-tight text-ink">${esc(s.title)}</h3>
         <p class="mt-2 text-base leading-relaxed text-muted">${esc(s.text)}</p>
       </li>`,
     )

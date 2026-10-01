@@ -9,6 +9,7 @@
  *    line           → hairlines
  *    accent         → brand color (buttons, highlights)
  *    tint           → soft accent background (labels, icon circles)
+ *    navy           → deep blue surfaces (designs section, footer)
  *    onAccent/onInk → text on accent / ink backgrounds
  * ============================================================================
  */
@@ -17,12 +18,13 @@ export const theme = {
   // Minimal: white, cool greys and a single blue. All text/background pairs meet WCAG AA.
   colors: {
     paper: '#FFFFFF',
-    cream: '#F4F6F9', // cool light grey
+    cream: '#F1F5FB', // blue-grey
     ink: '#111827', // blue-black
     muted: '#5B6575', // slate grey
-    line: '#E2E6EC',
+    line: '#DFE6F0',
     accent: '#2456D3', // blue — TODO: confirm your brand color
-    tint: '#EBF1FD', // pale blue
+    tint: '#E8EFFD', // pale blue
+    navy: '#0D1B3E', // deep blue surfaces (designs section, footer)
     onAccent: '#FFFFFF',
     onInk: '#F8FAFC',
   },

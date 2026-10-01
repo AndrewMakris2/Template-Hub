@@ -17,22 +17,22 @@ export function Contact({ contact, designs, pricing }) {
     .concat(pricing.plans.map((p) => `<option value="${esc(p.name)}">${esc(`${p.name} (${p.price} ${p.cadence})`)}</option>`))
     .join('');
   const promises = contact.promises
-    .map((p) => `<li class="flex items-center gap-3"><span class="text-accent">${icon('check', 'h-4 w-4')}</span>${esc(p)}</li>`)
+    .map((p) => `<li class="flex items-center gap-3"><span class="grid h-6 w-6 place-items-center rounded-full bg-white/15">${icon('check', 'h-3.5 w-3.5')}</span>${esc(p)}</li>`)
     .join('');
   const field = (id, name, type, def, extra = '') =>
     `<div><label for="${id}" class="${labelClasses}">${esc(def.label)}</label><input id="${id}" name="${name}" type="${type}" class="${inputClasses}" placeholder="${esc(def.placeholder || '')}" ${extra} /></div>`;
 
   return `
 <section id="contact" class="scroll-mt-16 bg-paper px-5 pb-24 md:scroll-mt-20 md:px-8 md:pb-32" aria-labelledby="contact-heading">
-  <div class="mx-auto grid max-w-6xl grid-cols-1 gap-12 rounded-2xl border border-line bg-cream p-7 text-ink md:p-14 lg:grid-cols-[1fr_1.25fr] lg:gap-16">
+  <div class="mx-auto grid max-w-6xl grid-cols-1 gap-12 rounded-2xl bg-accent p-7 text-on-accent md:p-14 lg:grid-cols-[1fr_1.25fr] lg:gap-16">
     <div class="lg:pt-4">
-      ${sectionLabel(contact.label)}
-      <h2 id="contact-heading" class="mt-5 text-4xl font-semibold tracking-[-0.03em] text-ink md:text-5xl">${esc(contact.heading)}</h2>
-      <p class="mt-5 text-lg leading-relaxed text-muted">${esc(contact.intro)}</p>
-      <ul class="mt-8 space-y-3 text-base text-ink">${promises}</ul>
+      ${sectionLabel(contact.label, 'dark')}
+      <h2 id="contact-heading" class="mt-5 text-4xl font-semibold tracking-[-0.03em] md:text-5xl">${esc(contact.heading)}</h2>
+      <p class="mt-5 text-lg leading-relaxed text-on-accent/85">${esc(contact.intro)}</p>
+      <ul class="mt-8 space-y-3 text-base">${promises}</ul>
     </div>
 
-    <form name="${esc(form.name)}" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" class="grid gap-5 self-start rounded-xl border border-line bg-paper p-6 text-ink shadow-sm sm:grid-cols-2 md:p-8" data-contact-form>
+    <form name="${esc(form.name)}" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" class="grid gap-5 self-start rounded-xl bg-paper p-6 text-ink shadow-2xl shadow-navy/30 sm:grid-cols-2 md:p-8" data-contact-form>
       <input type="hidden" name="form-name" value="${esc(form.name)}" />
       <p class="hidden" aria-hidden="true"><label>${esc(form.honeypotLabel)} <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
       ${field('inq-name', 'name', 'text', f.name, 'autocomplete="name" required')}

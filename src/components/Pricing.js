@@ -4,18 +4,18 @@ import { icon } from './icons.js';
 export function Pricing({ pricing }) {
   const plans = pricing.plans
     .map((p) => {
-      const featured = p.featured;
+      const blue = p.featured;
       const features = p.features
-        .map((f) => `<li class="flex gap-3"><span class="mt-0.5 shrink-0 text-accent">${icon('check', 'h-4 w-4')}</span>${esc(f)}</li>`)
+        .map((f) => `<li class="flex gap-3"><span class="mt-0.5 shrink-0 ${blue ? 'text-on-accent' : 'text-accent'}">${icon('check', 'h-4 w-4')}</span>${esc(f)}</li>`)
         .join('');
       return `
-      <li class="relative flex flex-col rounded-xl bg-paper p-8 ${featured ? 'border-2 border-accent shadow-xl shadow-accent/10' : 'border border-line'}">
-        ${p.badge ? `<span class="absolute -top-3 left-8 rounded-md bg-accent px-2.5 py-1 text-xs font-medium text-on-accent">${esc(p.badge)}</span>` : ''}
-        <h3 class="text-lg font-semibold tracking-tight text-ink">${esc(p.name)}</h3>
-        <p class="mt-1 text-sm text-muted">${esc(p.description)}</p>
-        <p class="mt-7 flex items-baseline gap-2"><span class="text-5xl font-semibold tracking-[-0.03em] text-ink">${esc(p.price)}</span><span class="text-sm text-muted">${esc(p.cadence)}</span></p>
-        <ul class="mt-7 flex-1 space-y-3 border-t border-line pt-7 text-sm text-ink/85">${features}</ul>
-        <a href="#contact" class="mt-9 w-full ${featured ? buttonClasses.primary : buttonClasses.ghost}" data-choose-plan="${esc(p.name)}">${esc(p.cta)}</a>
+      <li class="relative flex flex-col rounded-xl p-8 ${blue ? 'bg-accent text-on-accent shadow-2xl shadow-accent/30' : 'border border-line bg-paper text-ink'}">
+        ${p.badge ? `<span class="absolute -top-3 left-8 rounded-md bg-navy px-2.5 py-1 text-xs font-medium text-on-ink">${esc(p.badge)}</span>` : ''}
+        <h3 class="text-lg font-semibold tracking-tight">${esc(p.name)}</h3>
+        <p class="mt-1 text-sm ${blue ? 'text-on-accent/85' : 'text-muted'}">${esc(p.description)}</p>
+        <p class="mt-7 flex items-baseline gap-2"><span class="text-5xl font-semibold tracking-[-0.03em]">${esc(p.price)}</span><span class="text-sm ${blue ? 'text-on-accent/85' : 'text-muted'}">${esc(p.cadence)}</span></p>
+        <ul class="mt-7 flex-1 space-y-3 border-t pt-7 text-sm ${blue ? 'border-white/25' : 'border-line text-ink/85'}">${features}</ul>
+        <a href="#contact" class="mt-9 w-full ${blue ? buttonClasses.light : buttonClasses.ghost}" data-choose-plan="${esc(p.name)}">${esc(p.cta)}</a>
       </li>`;
     })
     .join('');
