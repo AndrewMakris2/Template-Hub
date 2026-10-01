@@ -119,7 +119,7 @@ export const content = {
     plans: [
       {
         name: 'Launch',
-        price: '$499', // TODO: confirm price
+        price: '$299',
         cadence: 'one-time',
         description: 'A beautiful site in your chosen design, ready to share.',
         features: ['Your pick of the 10 designs', 'Your photos, services, prices and bio', 'Booking button and contact form', 'Mobile-first, with SEO basics', 'One round of revisions', 'Free .netlify.app address'],
@@ -127,7 +127,7 @@ export const content = {
       },
       {
         name: 'Signature',
-        price: '$899', // TODO: confirm price
+        price: '$599',
         cadence: 'one-time',
         badge: 'Most popular',
         featured: true,
@@ -137,7 +137,7 @@ export const content = {
       },
       {
         name: 'Care plan',
-        price: '$29', // TODO: confirm price
+        price: '$19',
         cadence: 'per month',
         description: 'Optional. I keep your site running and up to date.',
         features: ['Hosting, SSL and security', 'Up to 30 minutes of updates each month', 'New photos, prices and hours on request', 'Contact form monitoring', 'Cancel anytime'],
