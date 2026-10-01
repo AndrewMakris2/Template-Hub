@@ -18,7 +18,7 @@ export const content = {
     url: 'https://andrew-makris.netlify.app', // update if you rename the Netlify project or add a domain
     title: 'Andrew Makris — Websites for independent hairstylists',
     description:
-      'Beautiful, mobile-first websites for independent hairstylists. Pick one of ten designs, send your photos and booking link, and launch in about a week.',
+      'Beautiful, mobile-first websites for independent hairstylists. Pick one of ten designs, send your photos and booking link, and launch in 3 days.',
     ogImage: 'https://andrew-makris.netlify.app/images/og.jpg',
     ogImageAlt: 'Andrew Makris — website designs for hairstylists',
   },
@@ -47,10 +47,10 @@ export const content = {
     heading: 'A website as good as',
     headingAccent: 'your work.',
     intro:
-      'Pick one of ten designs made for stylists. I fill it with your photos, services and booking link, and launch it in about a week.', // TODO: confirm turnaround
+      'Pick one of ten designs made for stylists. I fill it with your photos, services and booking link, and launch it in 3 days.',
     primaryCta: { label: 'Browse the designs', href: '#designs' },
     secondaryCta: { label: 'Get started', href: '#contact' },
-    highlights: ['10 original designs', 'Works with your booking app', 'Live in about a week'], // TODO: confirm turnaround
+    highlights: ['10 original designs', 'Works with your booking app', 'Live in 3 days'],
     collage: [2, 6, 10], // design numbers shown as desktop screenshots in the hero
     phone: 7, // design number shown on the phone
   },
@@ -103,7 +103,7 @@ export const content = {
 
   process: {
     label: 'How it works',
-    heading: 'From “I need a website” to live in about a week.', // TODO: confirm turnaround
+    heading: 'From “I need a website” to live in 3 days.',
     steps: [
       { title: 'Pick a design', text: 'Browse the ten designs and choose the one that fits your style. Not sure? I’ll help you decide.' },
       { title: 'Send your stuff', text: 'Your photos, services and prices, a few lines about you, and your booking link. Phone photos are fine.' },
@@ -165,7 +165,7 @@ export const content = {
       { q: 'Do I have to switch booking apps?', a: 'No. Your site links straight to the booking app you already use, whether that’s StyleSeat, Vagaro, Booksy, GlossGenius, Square or another. Clients book exactly how they do now.' },
       { q: 'Do I need professional photos?', a: 'No. Good phone photos of your work look great in every design. I’ll crop and optimise them so the site stays fast.' },
       { q: 'What do I need to send you?', a: 'Your photos, a list of services with prices and durations, a few lines about you, your booking link, your contact details and your hours. I’ll send you a simple checklist.' },
-      { q: 'How long does it take?', a: 'About a week from when I have your photos and details. The Signature plan gets priority.' }, // TODO: confirm turnaround
+      { q: 'How long does it take?', a: 'About 3 days from when I have your photos and details. The Signature plan gets priority.' },
       { q: 'Can I change things later?', a: 'Yes. With the Care plan, small updates like new prices, photos or hours are included each month. Without it, I can make changes whenever you need them.' },
       { q: 'Do I own my website and domain?', a: 'Yes. Your domain is registered in your name, and your content is always yours.' },
       { q: 'Can you change the colours or fonts?', a: 'Yes. Every design can be matched to your brand colours and fonts. That’s included in the Signature plan.' },
