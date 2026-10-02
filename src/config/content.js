@@ -167,7 +167,7 @@ export const content = {
       { q: 'How long does it take?', a: 'About 3 days from when I have your photos and details.' },
       { q: 'Can I change things later?', a: 'Yes. With the Care plan, small updates like new prices, photos or hours are included each month. Without it, I can make changes whenever you need them.' },
       { q: 'Do I own my website and domain?', a: 'Your domain is registered in your name and your content is always yours. Once you’ve paid, your site is yours to use for as long as you like.' },
-      { q: 'What if I change my mind?', a: 'You get a full refund if you cancel before I start work. Once I’ve sent your preview link, the one-time price isn’t refundable. You can cancel the Care plan anytime.' },
+      { q: 'How does payment work?', a: 'You pay 50% up front to book your project and the other 50% when you approve your site, before it goes live. If you cancel before I start work, I refund your deposit in full. Once I’ve sent your preview link, the deposit isn’t refundable. You can cancel the Care plan anytime.' },
       { q: 'Can you change the colours or fonts?', a: 'Yes. Every design can be matched to your brand colours and fonts. That’s included in the Signature plan.' },
       { q: 'Will I see it before it goes live?', a: 'Always. You get a private preview link to check on your phone and computer, and nothing launches until you’re happy.' },
     ],
