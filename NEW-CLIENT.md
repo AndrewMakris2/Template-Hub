@@ -6,9 +6,10 @@ you have the client's details and photos.
 
 ---
 
-## 1. They've paid and picked a design
+## 1. They've paid the deposit and picked a design
 
-You need: their design (1–10), their plan (Launch, Signature, Care plan) and
+Clients pay 50% up front and 50% when they approve the site. You need: the
+deposit, their design (1–10), their plan (Launch, Signature, Care plan) and
 their email.
 
 ## 2. Send them the checklist
@@ -113,7 +114,8 @@ From then on, every `git push` updates the live site within a minute.
 ## 7. Preview and revisions
 
 Send them the `.netlify.app` link to check on their phone and computer.
-Launch includes one round of revisions, Signature three.
+Launch includes one round of revisions, Signature three. Once they approve,
+send the link for the final 50%, and launch when it's paid.
 
 ## 8. Their domain (Signature)
 
