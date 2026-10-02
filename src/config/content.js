@@ -129,7 +129,7 @@ export const content = {
         badge: 'Most popular',
         featured: true,
         description: 'Your design, tailored to your brand, on your own domain.',
-        features: ['Everything in Launch', 'Your own domain connected', 'Colours and fonts matched to your brand', 'One extra section (bridal, FAQ, products…)', 'Three rounds of revisions'],
+        features: ['Everything in Launch', 'Your own domain connected', 'Colours and fonts matched to your brand', 'One extra section (bridal, policies or FAQ)', 'Three rounds of revisions'],
         cta: 'Choose Signature',
       },
       {
@@ -194,6 +194,107 @@ export const content = {
       sendingLabel: 'Sending…',
       successMessage: 'Thanks! Your enquiry is in. I’ll be in touch the same day.',
       errorMessage: 'Sorry, something went wrong. Please try again in a moment.',
+    },
+  },
+
+  // --------------------------------------------------------------------------
+  // CLIENT CHECKLIST — the /checklist/ page you send a client once they've
+  // booked. Not linked from the main page and hidden from search engines.
+  // Submissions arrive as the "intake" form (emailed like enquiries).
+  // --------------------------------------------------------------------------
+  checklist: {
+    title: 'Your website checklist | Andrew Makris',
+    description: 'Everything Andrew needs to build your website, in one form.',
+    backLabel: 'Back to the main site',
+    label: 'Your website checklist',
+    heading: 'Everything I need to build your site.',
+    intro: 'Fill this in once and I’ll take it from there. It takes about 15 minutes. Not sure about something? Leave it blank and we’ll sort it out together.',
+    photos: {
+      heading: 'Your photos',
+      text: 'Phone photos are fine. Email them to me or share a Google Drive, Dropbox or iCloud link in the form below.',
+      items: [
+        'A photo of you: a friendly headshot or you at work',
+        '6–9 photos of your best work, in good light',
+        'One wide (landscape) photo for the top of the page, if you have one',
+        'Your logo, if you have one',
+      ],
+    },
+    form: {
+      name: 'intake', // Netlify form name — shows up in the Netlify dashboard
+      groups: [
+        {
+          heading: 'You and your plan',
+          fields: [
+            { name: 'name', label: 'Your name', type: 'text', required: true, autocomplete: 'name' },
+            { name: 'email', label: 'Email', type: 'email', required: true, autocomplete: 'email' },
+            { name: 'design', label: 'Your design', type: 'design' },
+            { name: 'plan', label: 'Your plan', type: 'plan' },
+          ],
+        },
+        {
+          heading: 'Your business',
+          fields: [
+            { name: 'business', label: 'Business name, as it should appear on the site', type: 'text', required: true, wide: true },
+            { name: 'tagline', label: 'One-line tagline', type: 'text', placeholder: 'Lived-in colour and easy cuts', wide: true },
+            { name: 'city', label: 'City or area', type: 'text', placeholder: 'Austin, Texas' },
+            { name: 'address', label: 'Studio address', type: 'text', placeholder: 'Or “mobile” / “by appointment”' },
+            { name: 'public-phone', label: 'Phone for the site', type: 'tel' },
+            { name: 'public-email', label: 'Email for the site', type: 'email' },
+            { name: 'booking', label: 'Booking link', type: 'text', placeholder: 'Your StyleSeat, Vagaro, Booksy… link', hint: 'Every “Book” button on your site will go here.', wide: true },
+            { name: 'hours', label: 'Opening hours', type: 'textarea', rows: 3, placeholder: 'Tue–Fri 10–7, Sat 9–4, Sun–Mon closed', wide: true },
+          ],
+        },
+        {
+          heading: 'About you',
+          fields: [
+            { name: 'bio', label: 'A few lines about you', type: 'textarea', rows: 5, placeholder: 'How long you’ve been doing hair, what you love, what clients can expect…', hint: 'Don’t worry about polish. I’ll tidy it up and send it back for you to check.', wide: true },
+            { name: 'specialties', label: 'What you’re known for', type: 'text', placeholder: 'Blonding, curly cuts, bridal…', wide: true },
+          ],
+        },
+        {
+          heading: 'Services and prices',
+          fields: [
+            { name: 'services', label: 'Your services', type: 'textarea', rows: 7, placeholder: 'One per line: name, time, price, short note\nWomen’s cut, 60 min, $85, includes wash and style\nFull highlights, 3 hrs, from $220', hint: 'Or just paste your price list or booking-app menu.', wide: true },
+          ],
+        },
+        {
+          heading: 'Reviews',
+          fields: [
+            { name: 'reviews', label: '2–3 short reviews from clients', type: 'textarea', rows: 5, placeholder: 'The quote, plus their first name and initial', hint: 'Copy them from Google, your booking app or messages. Only use reviews clients are happy to share.', wide: true },
+          ],
+        },
+        {
+          heading: 'Socials and photos',
+          fields: [
+            { name: 'instagram', label: 'Instagram', type: 'text', placeholder: '@yourhandle' },
+            { name: 'tiktok', label: 'TikTok', type: 'text', placeholder: '@yourhandle' },
+            { name: 'other-socials', label: 'Facebook, Pinterest or others', type: 'text', wide: true },
+            { name: 'photos-link', label: 'Link to your photos', type: 'text', placeholder: 'Google Drive, Dropbox or iCloud link', hint: 'Or email them to me. Either is fine.', wide: true },
+          ],
+        },
+        {
+          heading: 'Signature plan extras',
+          note: 'Only if you chose Signature.',
+          fields: [
+            { name: 'brand', label: 'Brand colours and fonts', type: 'text', placeholder: 'Hex codes, a brand guide, or “match my Instagram”', wide: true },
+            { name: 'extra-section', label: 'Your extra section', type: 'select', options: ['Not sure yet', 'Bridal & events', 'Booking policies', 'FAQ', 'Something else'] },
+            { name: 'domain', label: 'Your domain', type: 'text', placeholder: 'yourname.com, or the one you’d like' },
+            { name: 'extra-details', label: 'Details for your extra section', type: 'textarea', rows: 4, placeholder: 'Bridal packages and prices, your cancellation policy, common questions…', wide: true },
+          ],
+        },
+        {
+          heading: 'Anything else',
+          fields: [
+            { name: 'message', label: 'Launch date, things you love on other sites, anything I should know', type: 'textarea', rows: 4, wide: true },
+          ],
+        },
+      ],
+      designUnsure: 'Not sure yet',
+      honeypotLabel: 'Don’t fill this out if you’re human:',
+      submitLabel: 'Send my details',
+      sendingLabel: 'Sending…',
+      successMessage: 'Got it, thank you! Once your photos are in, your private preview is about 3 days away. I’ll be in touch if anything’s missing.',
+      errorMessage: 'Sorry, something went wrong. Please try again in a moment, or email me your details.',
     },
   },
 

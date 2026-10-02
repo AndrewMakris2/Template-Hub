@@ -5,8 +5,9 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 const renderEntry = fileURLToPath(new URL('./src/render.js', import.meta.url));
 
 /**
- * Renders the page from src/config/content.js + src/config/theme.js at build
- * time (and on every request in dev) and injects it into index.html.
+ * Renders the pages from src/config/content.js + src/config/theme.js at build
+ * time (and on every request in dev) and injects them into index.html and
+ * checklist/index.html.
  */
 function staticRender() {
   return {
@@ -17,10 +18,13 @@ function staticRender() {
         const mod = ctx.server
           ? await ctx.server.ssrLoadModule('/src/render.js') // dev: picks up edits without restarting
           : await import(pathToFileURL(renderEntry).href);
+        // Each page has its own placeholders; only the matching ones render.
         return html
           .replace('%SITE_LANG%', mod.lang)
-          .replace('<!--app-head-->', mod.renderHead())
-          .replace('<!--app-body-->', mod.renderBody());
+          .replace('<!--app-head-->', () => mod.renderHead())
+          .replace('<!--app-body-->', () => mod.renderBody())
+          .replace('<!--checklist-head-->', () => mod.renderChecklistHead())
+          .replace('<!--checklist-body-->', () => mod.renderChecklistBody());
       },
     },
     // Config/component edits change the server-rendered HTML: drop the cached
@@ -42,5 +46,11 @@ export default defineConfig({
   plugins: [staticRender(), tailwindcss()],
   build: {
     outDir: 'dist',
+    rollupOptions: {
+      input: {
+        main: fileURLToPath(new URL('./index.html', import.meta.url)),
+        checklist: fileURLToPath(new URL('./checklist/index.html', import.meta.url)),
+      },
+    },
   },
 });

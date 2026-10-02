@@ -23,7 +23,8 @@ Everything written on the site is in **`src/config/content.js`**:
 - `hero`: headline, intro and which designs appear in the hero collage
 - `designs.items`: the 10 designs (name, style, tags, "best for", live URL, screenshots)
 - `pricing.plans`: packages and prices
-- `about`: your name, initial and bio
+- `about`: your name, photo and bio
+- `checklist`: the client checklist page (see below)
 - `faq`, `process`, `included`, `contact`: everything else
 
 Colours and fonts are in **`src/config/theme.js`**.
@@ -36,6 +37,23 @@ also link straight to a design with `?design=6#contact`.
 
 Enquiries are emailed to amakris03@gmail.com. To change the address: Netlify
 dashboard → **Forms → Submission notifications**.
+
+## Client checklist page
+
+**`/checklist/`** (https://andrew-makris.netlify.app/checklist/) is the page you
+send a client once they've booked: what photos to send, plus one form for
+everything else. It isn't linked from the main page and is hidden from search
+engines. Submissions arrive as the **intake** form, emailed like enquiries.
+The wording and form fields live in the `checklist` block of `content.js`.
+
+## New clients
+
+Step-by-step guide: **[NEW-CLIENT.md](NEW-CLIENT.md)**. To start a client's
+site from a template:
+
+```bash
+tools/new-client.sh 4 jane-doe-hair
+```
 
 ## Refresh the design screenshots
 

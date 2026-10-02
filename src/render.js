@@ -17,6 +17,7 @@ import { About } from './components/About.js';
 import { Faq } from './components/Faq.js';
 import { Contact } from './components/Contact.js';
 import { Footer } from './components/Footer.js';
+import { Checklist } from './components/Checklist.js';
 
 const kebab = (s) => s.replace(/[A-Z]/g, (c) => `-${c.toLowerCase()}`);
 
@@ -82,6 +83,26 @@ export function renderBody() {
     `</main>`,
     Footer(content),
   ].join('\n');
+}
+
+/** Head for the /checklist/ page: kept out of search results. */
+export function renderChecklistHead() {
+  const { checklist } = content;
+  return [
+    `<title>${esc(checklist.title)}</title>`,
+    `<meta name="description" content="${esc(checklist.description)}" />`,
+    `<meta name="robots" content="noindex" />`,
+    `<link rel="icon" href="${favicon()}" type="image/svg+xml" />`,
+    `<meta name="theme-color" content="${esc(theme.colors.navy)}" />`,
+    `<link rel="preconnect" href="https://fonts.googleapis.com" />`,
+    `<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />`,
+    `<link rel="stylesheet" href="${esc(theme.fonts.googleFontsUrl)}" />`,
+    themeStyles(),
+  ].join('\n    ');
+}
+
+export function renderChecklistBody() {
+  return Checklist(content);
 }
 
 export const lang = content.site.lang || 'en';
