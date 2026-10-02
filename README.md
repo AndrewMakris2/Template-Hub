@@ -46,6 +46,12 @@ everything else. It isn't linked from the main page and is hidden from search
 engines. Submissions arrive as the **intake** form, emailed like enquiries.
 The wording and form fields live in the `checklist` block of `content.js`.
 
+## Privacy page
+
+**`/privacy/`** explains what the enquiry and checklist forms collect and how
+it's used; both forms and the footer link to it. The wording is the `privacy`
+block in `content.js`, and your contact email is `contact.email`.
+
 ## New clients
 
 Step-by-step guide: **[NEW-CLIENT.md](NEW-CLIENT.md)**. To start a client's

@@ -6,8 +6,8 @@ const renderEntry = fileURLToPath(new URL('./src/render.js', import.meta.url));
 
 /**
  * Renders the pages from src/config/content.js + src/config/theme.js at build
- * time (and on every request in dev) and injects them into index.html and
- * checklist/index.html.
+ * time (and on every request in dev) and injects them into index.html,
+ * checklist/index.html and privacy/index.html.
  */
 function staticRender() {
   return {
@@ -24,7 +24,9 @@ function staticRender() {
           .replace('<!--app-head-->', () => mod.renderHead())
           .replace('<!--app-body-->', () => mod.renderBody())
           .replace('<!--checklist-head-->', () => mod.renderChecklistHead())
-          .replace('<!--checklist-body-->', () => mod.renderChecklistBody());
+          .replace('<!--checklist-body-->', () => mod.renderChecklistBody())
+          .replace('<!--privacy-head-->', () => mod.renderPrivacyHead())
+          .replace('<!--privacy-body-->', () => mod.renderPrivacyBody());
       },
     },
     // Config/component edits change the server-rendered HTML: drop the cached
@@ -50,6 +52,7 @@ export default defineConfig({
       input: {
         main: fileURLToPath(new URL('./index.html', import.meta.url)),
         checklist: fileURLToPath(new URL('./checklist/index.html', import.meta.url)),
+        privacy: fileURLToPath(new URL('./privacy/index.html', import.meta.url)),
       },
     },
   },

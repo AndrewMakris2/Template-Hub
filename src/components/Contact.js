@@ -30,6 +30,7 @@ export function Contact({ contact, designs, pricing }) {
       <h2 id="contact-heading" class="mt-5 text-4xl font-semibold tracking-[-0.03em] md:text-5xl">${esc(contact.heading)}</h2>
       <p class="mt-5 text-lg leading-relaxed text-on-ink/75">${esc(contact.intro)}</p>
       <ul class="mt-8 space-y-3 text-base">${promises}</ul>
+      <p class="mt-8 text-base text-on-ink/75">${esc(contact.emailLabel)} <a href="mailto:${esc(contact.email)}" class="font-medium text-on-ink underline underline-offset-4">${esc(contact.email)}</a></p>
     </div>
 
     <form name="${esc(form.name)}" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" class="grid gap-5 self-start rounded-xl bg-paper p-6 text-ink shadow-2xl shadow-black/30 sm:grid-cols-2 md:p-8" data-contact-form>
@@ -47,6 +48,7 @@ export function Contact({ contact, designs, pricing }) {
         <button type="submit" class="w-full ${buttonClasses.primary} disabled:opacity-60" data-submit data-label="${esc(form.submitLabel)}" data-sending-label="${esc(form.sendingLabel)}">${esc(form.submitLabel)} ${icon('arrowRight', 'h-4 w-4')}</button>
         <p class="mt-4 hidden rounded-lg bg-tint p-4 text-base text-ink" role="status" data-form-success>${esc(form.successMessage)}</p>
         <p class="mt-4 hidden rounded-lg bg-cream p-4 text-base text-ink" role="alert" data-form-error>${esc(form.errorMessage)}</p>
+        <p class="mt-4 text-sm text-muted">${esc(form.privacyNote)} <a href="/privacy/" class="underline underline-offset-4">${esc(form.privacyLabel)}</a></p>
       </div>
     </form>
   </div>

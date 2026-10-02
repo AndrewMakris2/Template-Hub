@@ -70,6 +70,10 @@ Also:
   - Their extra section: set `enabled: true` on `events`, `policies` or `faq`,
     fill it in, and add it to `nav.links`, e.g. `{ label: 'FAQ', href: '#faq' }`.
 
+- **Privacy page:** `/privacy/` is built in and fills in their name, email
+  and address. Set `privacy.updated` to the launch date and ask them to read
+  it. The script has already removed the demo banner.
+
 Check nothing is left over, then preview:
 
 ```bash

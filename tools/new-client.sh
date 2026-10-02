@@ -8,7 +8,8 @@
 # What it does:
 #   1. Copies the latest Template-<n> from GitHub into ../<client-slug>
 #      (next to this repo, or into $CLIENTS_DIR if set)
-#   2. Renames the project and points site.url at https://<client-slug>.netlify.app
+#   2. Renames the project, points site.url at https://<client-slug>.netlify.app
+#      and removes the demo banner
 #   3. Creates a GitHub repo <your-account>/<client-slug> (private unless
 #      --public) and pushes the first commit. --local skips this step.
 #
@@ -50,7 +51,7 @@ gh repo clone "$OWNER/Template-$TEMPLATE" "$DEST" -- --depth 1 --quiet
 rm -rf "$DEST/.git" "$DEST/.claude"
 cd "$DEST"
 
-echo "→ Naming the project $SLUG and setting the site URL to $URL"
+echo "→ Naming the project $SLUG, setting the site URL to $URL and removing the demo banner"
 SLUG="$SLUG" URL="$URL" node -e '
   const fs = require("fs");
   const { SLUG, URL } = process.env;
@@ -73,7 +74,9 @@ SLUG="$SLUG" URL="$URL" node -e '
     (_, indent) => `${indent}url: ${q}${URL}${q}, // switch to their own domain once it is connected`,
   );
   if (updated === content) throw new Error("could not find site.url in " + file);
-  fs.writeFileSync(file, updated);
+  // The "Demo website" strip is only for the public template demos.
+  const noDemo = updated.replace(/\n  \/\/ -+\n  \/\/ DEMO BANNER[\s\S]*?\n  demo: \{[\s\S]*?\n  \},\n/, "\n");
+  fs.writeFileSync(file, noDemo);
 '
 
 git init --quiet -b main

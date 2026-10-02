@@ -18,6 +18,7 @@ import { Faq } from './components/Faq.js';
 import { Contact } from './components/Contact.js';
 import { Footer } from './components/Footer.js';
 import { Checklist } from './components/Checklist.js';
+import { Privacy } from './components/Privacy.js';
 
 const kebab = (s) => s.replace(/[A-Z]/g, (c) => `-${c.toLowerCase()}`);
 
@@ -103,6 +104,26 @@ export function renderChecklistHead() {
 
 export function renderChecklistBody() {
   return Checklist(content);
+}
+
+/** Head for the /privacy/ page. */
+export function renderPrivacyHead() {
+  const { site, privacy } = content;
+  return [
+    `<title>${esc(privacy.title)}</title>`,
+    `<meta name="description" content="How Andrew Makris handles the details you send through this website." />`,
+    `<link rel="canonical" href="${esc(`${site.url.replace(/\/$/, '')}/privacy/`)}" />`,
+    `<link rel="icon" href="${favicon()}" type="image/svg+xml" />`,
+    `<meta name="theme-color" content="${esc(theme.colors.navy)}" />`,
+    `<link rel="preconnect" href="https://fonts.googleapis.com" />`,
+    `<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />`,
+    `<link rel="stylesheet" href="${esc(theme.fonts.googleFontsUrl)}" />`,
+    themeStyles(),
+  ].join('\n    ');
+}
+
+export function renderPrivacyBody() {
+  return Privacy(content);
 }
 
 export const lang = content.site.lang || 'en';

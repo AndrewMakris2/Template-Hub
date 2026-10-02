@@ -166,7 +166,8 @@ export const content = {
       { q: 'What do I need to send you?', a: 'Your photos, a list of services with prices and durations, a few lines about you, your booking link, your contact details and your hours. I’ll send you a simple checklist.' },
       { q: 'How long does it take?', a: 'About 3 days from when I have your photos and details.' },
       { q: 'Can I change things later?', a: 'Yes. With the Care plan, small updates like new prices, photos or hours are included each month. Without it, I can make changes whenever you need them.' },
-      { q: 'Do I own my website and domain?', a: 'Yes. Your domain is registered in your name, and your content is always yours.' },
+      { q: 'Do I own my website and domain?', a: 'Your domain is registered in your name and your content is always yours. Once you’ve paid, your site is yours to use for as long as you like.' },
+      { q: 'What if I change my mind?', a: 'You get a full refund if you cancel before I start work. Once I’ve sent your preview link, the one-time price isn’t refundable. You can cancel the Care plan anytime.' },
       { q: 'Can you change the colours or fonts?', a: 'Yes. Every design can be matched to your brand colours and fonts. That’s included in the Signature plan.' },
       { q: 'Will I see it before it goes live?', a: 'Always. You get a private preview link to check on your phone and computer, and nothing launches until you’re happy.' },
     ],
@@ -177,6 +178,8 @@ export const content = {
     heading: 'Let’s build your website.',
     intro: 'Tell me a little about you and which design you like. I’ll get back to you the same day with next steps.',
     promises: ['No obligation', 'A real reply from me, not a bot', 'Clear pricing up front'],
+    emailLabel: 'Prefer email?',
+    email: 'amakris03@gmail.com',
     form: {
       name: 'inquiry', // Netlify form name — shows up in the Netlify dashboard
       fields: {
@@ -194,6 +197,8 @@ export const content = {
       sendingLabel: 'Sending…',
       successMessage: 'Thanks! Your enquiry is in. I’ll be in touch the same day.',
       errorMessage: 'Sorry, something went wrong. Please try again in a moment.',
+      privacyNote: 'Your details are only used to reply to you.',
+      privacyLabel: 'Privacy policy',
     },
   },
 
@@ -295,6 +300,8 @@ export const content = {
       sendingLabel: 'Sending…',
       successMessage: 'Got it, thank you! Once your photos are in, your private preview is about 3 days away. I’ll be in touch if anything’s missing.',
       errorMessage: 'Sorry, something went wrong. Please try again in a moment, or email me your details.',
+      privacyNote: 'Your details are only used to build and look after your website.',
+      privacyLabel: 'Privacy policy',
     },
   },
 
@@ -303,5 +310,28 @@ export const content = {
     copyrightName: 'Andrew Makris',
     copyrightSuffix: 'All rights reserved.',
     backToTopLabel: 'Back to top',
+    privacyLabel: 'Privacy policy',
+  },
+
+  // --------------------------------------------------------------------------
+  // PRIVACY POLICY — the /privacy/ page, linked under both forms and in the
+  // footer. {email} is filled in from contact.email.
+  // --------------------------------------------------------------------------
+  privacy: {
+    title: 'Privacy policy | Andrew Makris',
+    heading: 'Privacy policy',
+    updatedLabel: 'Last updated',
+    updated: 'October 2, 2026',
+    backLabel: 'Back to the main site',
+    intro: 'I’m Andrew Makris, and I build websites for independent hairstylists. This policy explains what I collect through this website and how I use it.',
+    sections: [
+      { heading: 'What I collect', paragraphs: ['Through the enquiry form: your name, email, phone number if you give it, business name, Instagram or website, the design and plan you’re interested in, and your message.', 'Through the website checklist, if you become a client: your business details, bio, services and prices, reviews, social links, a link to your photos, and anything else you choose to share.'] },
+      { heading: 'How I use it', paragraphs: ['To reply to you, quote for your website, and build and look after it. The details you send for your site are published on your website, because that’s what they’re for. I never sell your details or add you to marketing emails.'] },
+      { heading: 'Where it’s kept', paragraphs: ['Form submissions are stored by my website host, Netlify, and sent to my email. Client website files, including the content you send, are kept in a private code repository on GitHub.'] },
+      { heading: 'How long I keep it', paragraphs: ['Enquiries that don’t turn into a project are deleted within 12 months. Client details are kept while we work together and as long as I need them for my business records.'] },
+      { heading: 'Cookies and analytics', paragraphs: ['This website doesn’t use cookies or any tracking.'] },
+      { heading: 'Your choices', paragraphs: ['You can ask to see, correct or delete the details I hold about you by emailing {email}.'] },
+      { heading: 'Children', paragraphs: ['This website isn’t aimed at children under 13, and I don’t knowingly collect their details.'] },
+    ],
   },
 };

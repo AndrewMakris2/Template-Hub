@@ -77,6 +77,7 @@ export function Checklist({ brand, checklist, designs, pricing }) {
         <button type="submit" class="w-full ${buttonClasses.primary} !py-4 disabled:opacity-60" data-submit data-sending-label="${esc(form.sendingLabel)}">${esc(form.submitLabel)} ${icon('arrowRight', 'h-4 w-4')}</button>
         <p class="mt-4 hidden rounded-lg bg-tint p-4 text-base text-ink" role="status" data-form-success>${esc(form.successMessage)}</p>
         <p class="mt-4 hidden rounded-lg bg-paper p-4 text-base text-ink" role="alert" data-form-error>${esc(form.errorMessage)}</p>
+        <p class="mt-4 text-sm text-muted">${esc(form.privacyNote)} <a href="/privacy/" class="underline underline-offset-4">${esc(form.privacyLabel)}</a></p>
       </div>
     </form>
   </div>
